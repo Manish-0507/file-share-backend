@@ -7,8 +7,6 @@ const path = require('path');
 const connectDB = require('./config/db');
 connectDB();
 
-
-app.use(cors(corsOptions));
 app.use(express.static('public'));
 app.use(express.json());//if any json data is encountered then it will able to parse it
 
