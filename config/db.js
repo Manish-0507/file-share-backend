@@ -8,7 +8,11 @@ function connectDB() {
     connection.once('open', () => {
         console.log('Database connected 🥳🥳🥳🥳');
     });
-    connection.on('error', console.log('error connecting db'));
+    connection.on('error', () => {
+        console.log('error connecting db')
+    }
+        )
+    
 
 }
 
