@@ -1,3 +1,4 @@
+  
 require('dotenv').config();
 const mongoose = require('mongoose');
 function connectDB() {
@@ -6,8 +7,8 @@ function connectDB() {
     const connection = mongoose.connection;
     connection.once('open', () => {
         console.log('Database connected 🥳🥳🥳🥳');
-    }).catch((err) => {
-        console.log(`Connection failed ${err}`);
+    }).catch(err => {
+        console.log('Connection failed ☹️☹️☹️☹️');
     });
 }
 
