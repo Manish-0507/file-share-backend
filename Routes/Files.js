@@ -57,7 +57,7 @@ router.post('/send', async (req, res) => {
    
       file.sender = emailFrom;
       file.receiver = emailTo;
-      const response = await file.save();
+    const response = await file.save();
     
       // send mail
     const sendMail = require('../services/emailService');

@@ -17,5 +17,8 @@ module.exports = async ({ from, to, subject, text, html}) => {
         subject: subject, // Subject line
         text: text, // plain text body
         html: html, // html body
+    }, (error, info) => {
+        console.log("error : " + JSON.stringify(error));
+        console.log("info : " + JSON.stringify(info))   
     });
 }
