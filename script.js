@@ -1,8 +1,7 @@
 const File = require('./models/file');
 const fs = require('fs');
-const connectDB = require('./config/db');
-connectDB();
-
+ require('./config/db');
+s
 async function fetchData() {
     //old files than 24 hours fetch them
     const pastDate = new Date(Date.now() - 24 * 60 * 60 * 1000)//aaj ki date se 24 hours back.
