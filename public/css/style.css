@@ -6,7 +6,7 @@
 
 body {
 	font-family: system-ui;
-	background: var(--main-bg-color);
+	background: #dafaca;
 	height: 98vh;
 	overflow: hidden;
 	display: flex;
@@ -15,14 +15,8 @@ body {
 	color: #333;
 }
 
-.logo {
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	width: 150px;
-}
 section.download {
-	background: #fff;
+	background: #b9f69b;
 	width: 430px;
 	max-width: 90%;
 	border-radius: 25px;

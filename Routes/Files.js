@@ -33,7 +33,7 @@ router.post('/', (req, res) => {
             path: req.file.path,//ye path multer de deta h destination wagra me filename add kr kra kde deta h.
             size: req.file.size
         });
-        const response = await file.save();
+      const response = await file.save();
       res.json({ file: `${process.env.APP_BASE_URL}/files/${response.uuid}` });
      
         // //http://localhost:3000/files/2343443jfjdfjdh-rkwjfjshdfjshf

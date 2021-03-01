@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT ||3000;
 const path = require('path');
 
 const connectDB = require('./config/db');
@@ -13,6 +13,16 @@ app.use(express.json());//if any json data is encountered then it will able to p
 //template engine
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');
+
+//Add Access Control Allow Origin Headers
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin","*");
+    res.header(
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content-Type, Accept"
+    );
+    next();
+  });
 
 // Routes 
 app.use('/api/files', require('./Routes/Files'));
